@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>PALS Plantaion Drive</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="styles.css">
+
+<body>
+
+  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-topleft w3-padding-large w3-xlarge">
+      <img src="img/logo.webp" class="logo" alt="PALS">
+    </div>
+    <div class="w3-display-topright w3-padding-large w3-xlarge">
+      <a href="https://indiaenvironment.org/">
+        <img src="img/efi-logo.png" class="logo" alt="EFI">
+      </a>
+    </div>
+    <div class="w3-display-middle">
+      <h1 class="jumbo w3-margin w3-animate-top">PLANTATION DRIVE</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <p class="w3-xlarge w3-center" id="days_left"></p>
+    </div>
+    <a id="scroll-down" href="#about" class="w3-display-bottommiddle">
+      <img class="scroll-down-icon" src="img/round_expand_more_white_48dp.png">
+    </a>
+  </div>
+
+  <div id="about" class="w3-display-container">
+    <div class="w3-display-middle">
+      <div class="w3-justify">
+        Tree plantation is not just something that should be done instead it is a necessity, the urgent need of the
+        hour. Planting of trees is especially important to protect our environment against air pollution and global
+        warming. To this end we reach out to you, young volunteers are encouraged to take this responsibility of
+        organizing tree plantation campaign in their hands.
+        We invite you to actively engage for this great cause and provide support. Remember very small step counts.
+      </div>
+      <div>
+        <a href="upi://pay?pa=9891341086@upi&pn=NARENDRA SISODIYA&cu=INR" style="text-decoration: none;">
+          <div class="donate-button">
+            Donate
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const date = new Date("02/28/2020")
+      const present_date = new Date();
+      const days_left = ((date.getTime() - present_date.getTime()) / (1000 * 3600 * 24)).toFixed(0);
+      $('#days_left').text(`${days_left} days left`)
+    })
+  </script>
+</body>
+
+</html>
