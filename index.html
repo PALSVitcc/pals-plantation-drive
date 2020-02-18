@@ -46,9 +46,20 @@
           volunteers to take the responsibility of organizing tree plantation campaigns.
           We invite you to actively engage for this great cause and contribute as much as possible from your side.
           Remember every small step counts. Be part of a noble cause to save your very own Earth on this
-          <strong>February 28</strong>.
+          <strong>February 28</strong> in Chennai, India.
         </p>
-        <p><strong>Tap on the buttons to contribute.</strong></p>
+        <p><strong>Tap on the buttons* or copy the UPI ID to contribute**.</strong></p>
+        <p class="w3-tiny">*Buttons does not support iOS devices.</p>
+        <p class="w3-tiny">**This will direct your money to Vruksha Coordinator.</p>
+      </div>
+      <div class="w3-row-padding">
+        <div class="vpa">
+          <input value="7397441915@ybl" class="w3-input  w3-border w3-round-large" type="text" disabled>
+          <p id="upid" hidden>7397441915@ybl</p>
+        </div>
+        <div class="vpa-copy">
+          <button type="button" class="w3-btn w3-border w3-round-large" onclick="copyVPA()">Copy UPI ID</button>
+        </div>
       </div>
       <div class="w3-margin-bottom" style="text-align: center;padding-bottom:24px">
         <a href="upi://pay?pa=7397441915@ybl&pn=PALS&cu=INR&am=50" style="text-decoration: none;">
@@ -120,6 +131,14 @@
       $('.preloader').hide();
       $('body').css('background-color', '#bacbdb');
     })
+
+    function copyVPA() {
+      var $temp = $("<input>");
+      $("body").append($temp);
+      $temp.val($('#upid').text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+    }
   </script>
 </body>
 
