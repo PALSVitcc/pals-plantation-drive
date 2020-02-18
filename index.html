@@ -58,7 +58,7 @@
           <p id="upid" hidden>7397441915@ybl</p>
         </div>
         <div class="vpa-copy">
-          <button type="button" class="w3-btn w3-border w3-round-large" onclick="copyVPA()">Copy UPI ID</button>
+          <button type="button" class="w3-btn w3-border w3-round-large" id="cpbtn" onclick="copyVPA()">Copy UPI ID</button>
         </div>
       </div>
       <div class="w3-margin-bottom" style="text-align: center;padding-bottom:24px">
@@ -161,6 +161,9 @@
       document.execCommand("copy");
       $temp.remove();
       document.getElementById('modal').style.display = 'block'; 
+      $('#cpbtn').text('Copied');
+      $('#cpbtn').css('background-color','#0e0e0e');
+      $('#cpbtn').css('color','#ffffff');
     }
   </script>
 </body>
