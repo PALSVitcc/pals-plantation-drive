@@ -118,10 +118,11 @@
     </div>
   </div>
 
-  <div class="w3-modal" id="modal">
+  <div class="w3-modal w3-animate-opacity" id="modal">
     <div class="w3-modal-content w3-card-4 w3-round">
-      <header class="w3-container"> 
-        <span onclick="document.getElementById('modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <header class="w3-container">
+        <span onclick="document.getElementById('modal').style.display='none'"
+          class="w3-button w3-display-topright">&times;</span>
         <h3>Steps to Contribute</h3>
       </header>
       <div class="w3-container">
@@ -159,7 +160,7 @@
       $temp.val($('#upid').text()).select();
       document.execCommand("copy");
       $temp.remove();
-      document.getElementById('modal').style.display='block';
+      document.getElementById('modal').style.display = 'block'; 
     }
   </script>
 </body>
