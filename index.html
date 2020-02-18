@@ -48,11 +48,11 @@
           Remember every small step counts. Be part of a noble cause to save your very own Earth on this
           <strong>February 28</strong> in Chennai, India.
         </p>
-        <p><strong>Tap on the buttons* or copy the UPI ID to contribute**.</strong></p>
+        <p><strong>Tap on the buttons* OR copy the UPI ID to contribute**.</strong></p>
         <p class="w3-tiny">*Buttons does not support iOS devices.</p>
         <p class="w3-tiny">**This will direct your money to Vruksha Coordinator.</p>
       </div>
-      <div class="w3-row-padding">
+      <div class="w3-row-padding" style="text-align: center;">
         <div class="vpa">
           <input value="7397441915@ybl" class="w3-input  w3-border w3-round-large" type="text" disabled>
           <p id="upid" hidden>7397441915@ybl</p>
@@ -118,6 +118,27 @@
     </div>
   </div>
 
+  <div class="w3-modal" id="modal">
+    <div class="w3-modal-content w3-card-4 w3-round">
+      <header class="w3-container"> 
+        <span onclick="document.getElementById('modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <h3>Steps to Contribute</h3>
+      </header>
+      <div class="w3-container">
+        <ul class="w3-ul">
+          <li>Open any UPI Payments App.</li>
+          <li>Select New option.</li>
+          <li>Paste the Virtual Payment Address (VPA) or UPI id.</li>
+          <li>Set the amount.</li>
+          <li>Make your valuable contribution.</li>
+        </ul>
+        <footer>
+          <p class="w3-small">Remember, every small step counts.</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
@@ -138,6 +159,7 @@
       $temp.val($('#upid').text()).select();
       document.execCommand("copy");
       $temp.remove();
+      document.getElementById('modal').style.display='block';
     }
   </script>
 </body>
