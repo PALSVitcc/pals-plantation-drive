@@ -11,6 +11,7 @@ body, html {
 }
 
 #about{
+    display: none!important;
     min-height: 100%;
     background-image: linear-gradient(#bacbdb,#f6f9fa);
 }
