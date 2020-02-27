@@ -4,7 +4,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="author" content="Manak Pandey">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="cache-control" content="no-cache">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -147,7 +146,10 @@
       const date = new Date("02/28/2020")
       const present_date = new Date();
       const days_left = ((date.getTime() - present_date.getTime()) / (1000 * 3600 * 24)).toFixed(0);
-      $('#days_left').text(`${days_left} days left`)
+      if(days_left>0)
+        $('#days_left').text(`${days_left} days left`)
+      else
+        $('#days_left').text('February 28, 2020')
     })
     $(window).on("load", function () {
       $('.content').show();
